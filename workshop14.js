@@ -13,7 +13,7 @@ import {Platform, StyleSheet, Text, View, Alert, Button} from 'react-native';
 
 
 //Auto binding
-export default class workshop12 extends Component {
+export default class workshop14 extends Component {
   constructor(props){
     super(props)
     this.state = {active: false};
@@ -24,18 +24,25 @@ export default class workshop12 extends Component {
   clickMe = () => {
     this.setState(oldState => {
       return {active: !oldState.active}
+      
     })
+    Alert.alert("Quick Click");
   }
   clickMeWithArrowFn = ()=>{
     this.setState(oldState => {
       return {active: !oldState.active}
     })
+    Alert.alert("clickMeWithArrowFn Click");
+  }
+
+  longClickMe(){
+    Alert.alert("Long Click");
   }
 //background is back we have to change it by using underlayColor="white" or "#FFFFFF"
   render() {
     return (
       <View style={{padding: 10,flex : 1, flexDirection: 'column',justifyContent : 'center'}}>
-        <Button title={this.state.active ? "Active" : "InActive"} onPress={this.clickMe} />
+        <Button title={this.state.active ? "Active" : "InActive"} onPress={this.clickMe} onLongPress={this.longClickMe}/>
         <Button title={this.state.active ? "Active" : "InActive"} onPress={this.clickMeWithArrowFn} />
 
       </View>

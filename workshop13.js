@@ -13,7 +13,7 @@ import {Platform, StyleSheet, Text, View, Alert, Button} from 'react-native';
 
 
 //How to do jesture Ios it is make image click like button
-export default class workshop12 extends Component {
+export default class workshop13 extends Component {
   constructor(props){
     super(props)
     this.state = {active: false};
